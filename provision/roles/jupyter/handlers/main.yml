@@ -1,3 +1,5 @@
 ---
 - name: enable jupyter
-  service: name=jupyter enabled=yes
+  become: yes
+  become_user: root
+  command: update-rc.d jupyter defaults
