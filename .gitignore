@@ -1,0 +1,5 @@
+.vagrant
+*.retry
+
+config.yml
+config.json

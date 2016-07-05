@@ -1,0 +1,3 @@
+---
+- name: enable jupyter
+  service: name=jupyter enabled=yes

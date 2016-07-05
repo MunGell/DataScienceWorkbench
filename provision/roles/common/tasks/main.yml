@@ -1,0 +1,6 @@
+---
+- name: Install common packages
+  become: yes
+  become_user: root
+  apt: name={{item}} state=installed update_cache=true force=yes autoremove=yes
+  with_items: "{{ common_packages }}"

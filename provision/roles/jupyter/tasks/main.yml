@@ -1,0 +1,14 @@
+---
+- name: Install jupyter
+  pip: executable=pip3 name={{item}}
+  with_items: "{{pip_packages}}"
+  tags: jupyter
+
+- name: Create jupyter confoguration file
+  command: jupyter notebook --generate-config -y creates=/home/vagrant/jupyter_notebook_config.py
+  tags: jupyter
+
+- name: Setup jupyter service
+  copy: src=jupyter dest=/etc/init.d owner=root group=root mode=0755
+  notify: enable jupyter
+  tags: jupyter
