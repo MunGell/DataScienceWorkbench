@@ -1,6 +1,4 @@
 ---
 - name: Install python packages
-  become: yes
-  become_user: root
   apt: name={{item}} state=installed force=yes autoremove=yes
   with_items: "{{python_packages}}"

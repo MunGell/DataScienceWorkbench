@@ -9,3 +9,6 @@
       become: yes
       become_user: root
     - jupyter-config
+    - role: r
+      become: yes
+      become_user: root
