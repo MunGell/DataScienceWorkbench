@@ -1,5 +1,5 @@
 ---
-- hosts: local
+- hosts: default
   roles:
     - common
     - role: python

@@ -1,4 +1,8 @@
 ---
+- name: Install R dependencies
+  apt: name={{item}} state=installed force=yes autoremove=yes
+  with_items: "{{rdep_packages}}"
+
 - name: Install R packages
   apt: name={{item}} state=installed force=yes autoremove=yes
   with_items: "{{r_packages}}"

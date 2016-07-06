@@ -24,5 +24,9 @@ Vagrant.configure(2) do |config|
     vb.memory = settings["memory"]
     vb.cpus = settings["cpus"]
   end
+
+  config.vm.provision "ansible" do |ansible|
+      ansible.playbook = "provision/main.yml"
+    end
 end
 
