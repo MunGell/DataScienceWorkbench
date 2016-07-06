@@ -7,4 +7,4 @@ port: 8888
 memory: 4096
 cpus: 4
 
-notebooks: "~/Projects/Notebooks"
+notebooks: "~/Notebooks"

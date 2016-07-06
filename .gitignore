@@ -1,5 +1,5 @@
 .vagrant
 *.retry
 
-config.yml
-config.json
+settings.yml
+settings.json
