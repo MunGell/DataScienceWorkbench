@@ -1,3 +1,5 @@
 ---
-- name: restart jupyter
-  service: name=jupyter state=restarted
+- name: start jupyter
+  become: yes
+  become_user: root
+  service: name=jupyter state=started

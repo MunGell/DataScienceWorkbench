@@ -1,4 +1,10 @@
 ---
+- name: Add apt key for R
+  apt_key: keyserver=keyserver.ubuntu.com id=E084DAB9 state=present
+
+- name: Copy cpan list
+  copy: src=cpan.list dest=/etc/apt/sources.list.d owner=root group=root
+
 - name: Install R dependencies
   apt: name={{item}} state=installed force=yes autoremove=yes
   with_items: "{{rdep_packages}}"

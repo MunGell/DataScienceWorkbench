@@ -5,10 +5,13 @@
     - role: python
       become: yes
       become_user: root
+    - role: python-science
+      become: yes
+      become_user: root
     - role: jupyter
       become: yes
       become_user: root
-    - jupyter-config
     - role: r
       become: yes
       become_user: root
+    - jupyter-config

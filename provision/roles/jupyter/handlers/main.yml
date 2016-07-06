@@ -1,5 +1,3 @@
 ---
 - name: enable jupyter
-  become: yes
-  become_user: root
   command: update-rc.d jupyter defaults

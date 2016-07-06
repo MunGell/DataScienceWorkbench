@@ -1,11 +1,15 @@
 ---
+- name: Create jupyter confoguration file
+  command: /usr/local/bin/jupyter notebook --generate-config -y chdir=/home/vagrant creates=/home/vagrant/.jupyter/jupyter_notebook_config.py
+  tags: jupyter-config
+
 - name: Setup notebooks location
   replace:
     dest: /home/vagrant/.jupyter/jupyter_notebook_config.py
     regexp: \# c.NotebookApp.notebook_dir = \'\'
-    replace: c.NotebookApp.notebook_dir = \'/notebooks\'
+    replace: c.NotebookApp.notebook_dir = '/notebooks'
     backup: yes
-  tags: jupyter
+  tags: jupyter-config
 
 - name: Setup jupyter port
   replace:
@@ -13,7 +17,7 @@
     regexp: \# c.NotebookApp.port = 8888
     replace: c.NotebookApp.port = 8080
     backup: yes
-  tags: jupyter
+  tags: jupyter-config
 
 - name: Setup jupyter IP
   replace:
@@ -21,7 +25,7 @@
     regexp: \# c.NotebookApp.ip = 'localhost'
     replace: c.NotebookApp.ip = '0.0.0.0'
     backup: yes
-  tags: jupyter
+  tags: jupyter-config
 
 - name: Enable MathJAX
   replace:
@@ -29,7 +33,7 @@
     regexp: \# c.NotebookApp.enable_mathjax = True
     replace: c.NotebookApp.enable_mathjax = True
     backup: yes
-  tags: jupyter
+  tags: jupyter-config
 
 - name: Disable browser
   replace:
@@ -37,5 +41,5 @@
     regexp: \# c.NotebookApp.open_browser = True
     replace: c.NotebookApp.open_browser = False
     backup: yes
-  notify: restart jupyter
-  tags: jupyter
+  notify: start jupyter
+  tags: jupyter-config

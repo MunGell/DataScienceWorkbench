@@ -1,0 +1,15 @@
+---
+python_build_dep:
+  - python-matplotlib
+
+python_science_dep:
+  - libatlas-base-dev
+  - gfortran
+
+pip_science_packages:
+  - numpy
+  - scipy
+  - pandas
+  - matplotlib
+  - scikit-learn
+  - networkx
