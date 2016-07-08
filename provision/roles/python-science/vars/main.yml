@@ -13,3 +13,5 @@ pip_science_packages:
   - matplotlib
   - scikit-learn
   - networkx
+  - seaborn
+  - statsmodels
