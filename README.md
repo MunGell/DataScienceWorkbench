@@ -5,6 +5,7 @@ It's Ansible provision playbook installs Jupyter, Python 3 kernel and all basic 
 
 ## Getting Started
 
+0. Make sure following software is installed on your host machine: [VirtualBox](https://www.virtualbox.org), [Vagrant](http://vagrantup.com), [Ansible](https://www.ansible.com/).
 1. Clone/Download the repository
 2. Rename file `settings.yml.example` to `settings.yml`
 3. Edit any settings that you wish in `settings.yml`
