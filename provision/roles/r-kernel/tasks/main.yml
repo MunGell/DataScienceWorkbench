@@ -1,0 +1,9 @@
+---
+- name: Install R devtools packages
+  command: R -e "install.packages(c('repr', 'pbdZMQ', 'devtools'), repos = c('http://irkernel.github.io/', 'http://cloud.r-project.org'))"
+
+- name: Install R Kernel packages
+  command: R -e "devtools::install_github(c('IRkernel/IRdisplay', 'IRkernel/IRkernel'))"
+
+- name: Install R Kernel
+  command: R -e "IRkernel::installspec(user = FALSE)"

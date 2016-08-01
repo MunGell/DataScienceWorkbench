@@ -14,4 +14,7 @@
     - role: r
       become: yes
       become_user: root
+    - role: r-kernel
+      become: yes
+      become_user: root
     - jupyter-config

@@ -28,7 +28,6 @@ Following `pip` packages are installed:
   - scikit-learn
   - networkx
 
+## R kernel
 
-## Roadmap
-
-Finalise R kernel installation that is now blocked by a bug in `devtools` R package.
+Uses RStudio version of R, which is 3.3 at the moment.
